@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Alex Morgan</title>
+  <meta name="description" content="Get in touch with Alex Morgan." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/index.html" class="nav-logo">Alex Morgan</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/projects.html">Projects</a></li>
+        <li><a href="/contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <h1>Get In Touch</h1>
+      <p>Have a project in mind? I'd love to hear from you.</p>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!--
+          TUTOR NOTE — Contact Form
+          The <form> has id="contactForm" so JavaScript can target it.
+          Each input has:
+            • <label> with a matching "for" attribute (accessibility)
+            • required attribute (basic browser validation)
+            • an error <span> that JavaScript shows when the field is invalid
+
+          We prevent the default form submit and handle everything in JS.
+        -->
+        <div class="contact-form-wrapper">
+          <h2>Send a Message</h2>
+
+          <!-- Success banner — hidden by default, shown by JS after submission -->
+          <div class="form-success" id="formSuccess" hidden>
+            Message sent! I'll reply within 24 hours.
+          </div>
+
+          <form id="contactForm" novalidate>
+
+            <div class="form-group">
+              <label for="name">Full Name <span class="required">*</span></label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Jane Smith"
+                autocomplete="name"
+              />
+              <span class="field-error" id="nameError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address <span class="required">*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="jane@example.com"
+                autocomplete="email"
+              />
+              <span class="field-error" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject <span class="required">*</span></label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Project inquiry"
+              />
+              <span class="field-error" id="subjectError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message <span class="required">*</span></label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="Tell me about your project, timeline, and budget..."
+              ></textarea>
+              <span class="field-error" id="messageError"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">
+              Send Message
+            </button>
+
+          </form>
+        </div>
+
+        <!-- Right column: contact info -->
+        <aside class="contact-info">
+          <h2>Other Ways to Reach Me</h2>
+
+          <div class="contact-item">
+            <div class="contact-icon">✉</div>
+            <div>
+              <strong>Email</strong>
+              <p>alex@alexmorgan.dev</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">🔗</div>
+            <div>
+              <strong>LinkedIn</strong>
+              <p>linkedin.com/in/alexmorgan</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">⌥</div>
+            <div>
+              <strong>GitHub</strong>
+              <p>github.com/alexmorgan</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">⏰</div>
+            <div>
+              <strong>Response Time</strong>
+              <p>Usually within 24 hours</p>
+            </div>
+          </div>
+
+          <div class="availability-badge">
+            <span class="availability-dot"></span>
+            Available for freelance &amp; full-time roles
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Alex Morgan. Built with HTML, CSS &amp; JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="/src/script.js"></script>
+</body>
+</html>

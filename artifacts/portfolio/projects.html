@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Alex Morgan</title>
+  <meta name="description" content="A showcase of Alex Morgan's web development projects." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/index.html" class="nav-logo">Alex Morgan</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/projects.html" class="active">Projects</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <h1>Projects</h1>
+      <p>Things I've built — ranging from small experiments to full products</p>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+
+      <!--
+        TUTOR NOTE — Filter Buttons
+        These buttons use data-filter attributes. JavaScript reads that attribute
+        and shows/hides cards based on their data-category attribute.
+        This is a common beginner JS pattern: store info in the HTML, read it in JS.
+      -->
+      <div class="filter-bar" role="group" aria-label="Filter projects">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web-app">Web Apps</button>
+        <button class="filter-btn" data-filter="website">Websites</button>
+        <button class="filter-btn" data-filter="tool">Tools</button>
+      </div>
+
+      <!--
+        TUTOR NOTE — Project Cards Grid
+        Each <article> has a data-category attribute.
+        The filter buttons in JavaScript use this to show/hide cards.
+        CSS Grid makes the layout responsive automatically.
+      -->
+      <div class="cards-grid" id="projectsGrid">
+
+        <article class="card" data-category="web-app">
+          <div class="card-badge">Web App</div>
+          <h3 class="card-title">Task Manager Pro</h3>
+          <p class="card-description">
+            A drag-and-drop task management app with local storage persistence,
+            priority labels, due dates, and a clean board/list view toggle.
+          </p>
+          <div class="card-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">CSS Grid</span>
+            <span class="tag">LocalStorage</span>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="card-link">Live Demo →</a>
+            <a href="#" class="card-link-secondary">GitHub</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="website">
+          <div class="card-badge">Website</div>
+          <h3 class="card-title">Café Lumière</h3>
+          <p class="card-description">
+            A responsive restaurant website with an interactive menu, reservation
+            form, photo gallery, and an embedded map. Built for a real client.
+          </p>
+          <div class="card-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="card-link">Live Demo →</a>
+            <a href="#" class="card-link-secondary">GitHub</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="tool">
+          <div class="card-badge">Tool</div>
+          <h3 class="card-title">CSS Gradient Generator</h3>
+          <p class="card-description">
+            A browser-based tool to visually build CSS gradients with live preview
+            and one-click code copy. Zero dependencies, pure vanilla JS.
+          </p>
+          <div class="card-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Clipboard API</span>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="card-link">Live Demo →</a>
+            <a href="#" class="card-link-secondary">GitHub</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="web-app">
+          <div class="card-badge">Web App</div>
+          <h3 class="card-title">Budget Tracker</h3>
+          <p class="card-description">
+            A personal finance dashboard that categorises income and expenses,
+            draws a live donut chart, and exports data to CSV — all client-side.
+          </p>
+          <div class="card-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">Canvas API</span>
+            <span class="tag">LocalStorage</span>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="card-link">Live Demo →</a>
+            <a href="#" class="card-link-secondary">GitHub</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="website">
+          <div class="card-badge">Website</div>
+          <h3 class="card-title">Sierra Design Studio</h3>
+          <p class="card-description">
+            Portfolio site for a graphic design studio. Features a masonry image
+            grid, smooth scroll animations, and a dark/light mode toggle.
+          </p>
+          <div class="card-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="card-link">Live Demo →</a>
+            <a href="#" class="card-link-secondary">GitHub</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="tool">
+          <div class="card-badge">Tool</div>
+          <h3 class="card-title">Markdown Previewer</h3>
+          <p class="card-description">
+            A split-pane Markdown editor with live HTML preview, syntax highlighting,
+            and export-to-HTML. Supports GitHub-flavoured Markdown.
+          </p>
+          <div class="card-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">Marked.js</span>
+            <span class="tag">CSS Flexbox</span>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="card-link">Live Demo →</a>
+            <a href="#" class="card-link-secondary">GitHub</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Alex Morgan. Built with HTML, CSS &amp; JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="/src/script.js"></script>
+</body>
+</html>

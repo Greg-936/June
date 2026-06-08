@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Morgan — Portfolio</title>
+  <meta name="description" content="Frontend developer and designer based in San Francisco." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+  <!--
+    TUTOR NOTE — Navigation Bar
+    This <nav> is shared across all pages. It uses Flexbox to place
+    the logo on the left and links on the right. The hamburger button
+    is hidden on desktop and shown only on small screens via CSS.
+  -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/index.html" class="nav-logo">Alex Morgan</a>
+
+      <!-- Hamburger button: visible only on mobile -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/index.html" class="active">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/projects.html">Projects</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--
+    TUTOR NOTE — Hero Section
+    A full-height section that greets the visitor.
+    We use Flexbox with flex-direction: column to center content vertically.
+  -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-greeting">Hello, I'm</p>
+      <h1 class="hero-name">Alex Morgan</h1>
+      <p class="hero-tagline">Frontend Developer &amp; UI Designer</p>
+      <p class="hero-description">
+        I build clean, accessible, and performant web experiences.<br />
+        Based in San Francisco, open to remote work.
+      </p>
+      <div class="hero-actions">
+        <a href="/projects.html" class="btn btn-primary">View My Work</a>
+        <a href="/contact.html" class="btn btn-outline">Get In Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!--
+    TUTOR NOTE — Skills Section
+    A simple grid of skill "chips". CSS Grid auto-fills columns
+    so this automatically becomes responsive.
+  -->
+  <section class="section skills-section">
+    <div class="container">
+      <h2 class="section-title">Skills &amp; Tools</h2>
+      <div class="skills-grid">
+        <span class="skill-chip">HTML5</span>
+        <span class="skill-chip">CSS3</span>
+        <span class="skill-chip">JavaScript</span>
+        <span class="skill-chip">React</span>
+        <span class="skill-chip">Node.js</span>
+        <span class="skill-chip">Git</span>
+        <span class="skill-chip">Figma</span>
+        <span class="skill-chip">TypeScript</span>
+      </div>
+    </div>
+  </section>
+
+  <!--
+    TUTOR NOTE — Featured Projects Preview
+    We show two project cards inline. Clicking leads to the full Projects page.
+  -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Featured Work</h2>
+      <div class="cards-grid">
+        <article class="card">
+          <div class="card-badge">Web App</div>
+          <h3 class="card-title">Task Manager Pro</h3>
+          <p class="card-description">
+            A drag-and-drop task management app with local storage persistence,
+            labels, and due dates.
+          </p>
+          <div class="card-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">CSS Grid</span>
+            <span class="tag">LocalStorage</span>
+          </div>
+          <a href="/projects.html" class="card-link">See all projects →</a>
+        </article>
+
+        <article class="card">
+          <div class="card-badge">Website</div>
+          <h3 class="card-title">Café Lumière</h3>
+          <p class="card-description">
+            A responsive restaurant website with an interactive menu, reservation
+            form, and Google Maps embed.
+          </p>
+          <div class="card-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <a href="/projects.html" class="card-link">See all projects →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Alex Morgan. Built with HTML, CSS &amp; JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="/src/script.js"></script>
+</body>
+</html>

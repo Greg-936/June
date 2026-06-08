@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Alex Morgan</title>
+  <meta name="description" content="Learn more about Alex Morgan, frontend developer and UI designer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/index.html" class="nav-logo">Alex Morgan</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html" class="active">About</a></li>
+        <li><a href="/projects.html">Projects</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--
+    TUTOR NOTE — Page Header
+    A consistent "page header" pattern used across inner pages.
+    It gives each page a clear, visual title area.
+  -->
+  <header class="page-header">
+    <div class="container">
+      <h1>About Me</h1>
+      <p>A little about who I am and what I do</p>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+
+      <!--
+        TUTOR NOTE — Two-Column Layout
+        CSS Grid with two columns: a wider content area and a narrower sidebar.
+        On mobile (< 768px), the grid collapses to a single column via a media query.
+      -->
+      <div class="about-grid">
+
+        <!-- Left column: bio text -->
+        <div class="about-bio">
+          <h2>Who I Am</h2>
+          <p>
+            I'm a frontend developer with 4 years of experience crafting clean,
+            user-friendly web interfaces. I care deeply about accessibility,
+            performance, and writing code that other developers actually enjoy
+            reading.
+          </p>
+          <p>
+            Before coding, I studied graphic design — which is why I pay close
+            attention to typography, white space, and visual hierarchy. I believe
+            great design and great code go hand in hand.
+          </p>
+          <p>
+            When I'm not at my desk, you'll find me hiking in Marin County,
+            experimenting with sourdough recipes, or reading dense sci-fi novels.
+          </p>
+
+          <h2>My Approach</h2>
+          <p>
+            I start with the user. Every decision — from button placement to
+            color choice — should serve the person on the other side of the screen.
+            I then write semantic HTML, layer in CSS that works without JavaScript,
+            and add JS only where it genuinely improves the experience.
+          </p>
+
+          <a href="/contact.html" class="btn btn-primary" style="margin-top: 1.5rem; display: inline-block;">
+            Let's Work Together
+          </a>
+        </div>
+
+        <!-- Right column: quick facts sidebar -->
+        <aside class="about-sidebar">
+          <div class="info-card">
+            <h3>Quick Facts</h3>
+            <ul class="info-list">
+              <li>
+                <span class="info-label">Location</span>
+                <span class="info-value">San Francisco, CA</span>
+              </li>
+              <li>
+                <span class="info-label">Experience</span>
+                <span class="info-value">4 years</span>
+              </li>
+              <li>
+                <span class="info-label">Availability</span>
+                <span class="info-value">Open to work</span>
+              </li>
+              <li>
+                <span class="info-label">Education</span>
+                <span class="info-value">BSc Computer Science</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="info-card" style="margin-top: 1.5rem;">
+            <h3>Core Skills</h3>
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <span class="skill-bar-label">HTML &amp; CSS</span>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" style="width: 95%"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <span class="skill-bar-label">JavaScript</span>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <span class="skill-bar-label">React</span>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" style="width: 75%"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <span class="skill-bar-label">Figma / Design</span>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" style="width: 70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!--
+        TUTOR NOTE — Timeline
+        An ordered list styled to look like a vertical timeline using
+        CSS borders and pseudo-elements.
+      -->
+      <section style="margin-top: 4rem;">
+        <h2 class="section-title">Experience Timeline</h2>
+        <ol class="timeline">
+          <li class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2022 — Present</span>
+              <h3>Frontend Developer — Acme Corp</h3>
+              <p>Built and maintained a React-based design system used across 12 products.</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2020 — 2022</span>
+              <h3>UI Developer — Startup Studio</h3>
+              <p>Delivered MVPs for 8 client startups in 18 months. Specialised in fast, responsive landing pages.</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2019 — 2020</span>
+              <h3>Junior Developer — Freelance</h3>
+              <p>WordPress and custom HTML/CSS sites for small businesses and non-profits.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Alex Morgan. Built with HTML, CSS &amp; JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="/src/script.js"></script>
+</body>
+</html>

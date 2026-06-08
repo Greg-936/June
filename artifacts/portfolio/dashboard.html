@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — Alex Morgan</title>
+  <meta name="description" content="Private dashboard showing contact form submissions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/index.html" class="nav-logo">Alex Morgan</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/projects.html">Projects</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <h1>Submissions Dashboard</h1>
+      <p>All contact form submissions stored in your browser</p>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+
+      <!--
+        TUTOR NOTE — Dashboard Stats
+        These stat cards read their numbers from localStorage via JavaScript.
+        The ids (statTotal, statToday, statUnread) are targets for JS to update.
+      -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-number" id="statTotal">0</span>
+          <span class="stat-label">Total Submissions</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" id="statToday">0</span>
+          <span class="stat-label">Today</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" id="statUnread">0</span>
+          <span class="stat-label">Unread</span>
+        </div>
+      </div>
+
+      <!--
+        TUTOR NOTE — Dashboard Controls
+        Two buttons: one to add sample data (so you can see the table
+        without filling out the form), and one to clear all data.
+        Both call functions defined in script.js.
+      -->
+      <div class="dashboard-controls">
+        <h2>Contact Submissions</h2>
+        <div class="dashboard-actions">
+          <button class="btn btn-outline" id="addSampleBtn">Add Sample Data</button>
+          <button class="btn btn-danger" id="clearAllBtn">Clear All</button>
+        </div>
+      </div>
+
+      <!--
+        TUTOR NOTE — Empty State
+        Shown when there are no submissions. Hidden by JS when data exists.
+        Good UX pattern: always explain why a table is empty.
+      -->
+      <div class="empty-state" id="emptyState">
+        <p>No submissions yet.</p>
+        <p>
+          Fill out the <a href="/contact.html">contact form</a> or click
+          "Add Sample Data" to see how the table works.
+        </p>
+      </div>
+
+      <!--
+        TUTOR NOTE — Submissions Table
+        Hidden by default (hidden attribute). JS shows it and fills
+        the <tbody id="submissionsBody"> rows dynamically.
+        
+        We use a <table> element because this IS tabular data — rows and
+        columns of related submissions. Using a table for tabular data
+        is correct semantic HTML.
+      -->
+      <div class="table-wrapper" id="tableWrapper" hidden>
+        <table class="submissions-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Subject</th>
+              <th>Message</th>
+              <th>Date &amp; Time</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="submissionsBody">
+            <!-- Rows inserted here by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Alex Morgan. Built with HTML, CSS &amp; JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="/src/script.js"></script>
+</body>
+</html>
